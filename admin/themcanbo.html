@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Vi Phạm Hành Chính</title>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
+	<link href="../css/datepicker3.css" rel="stylesheet">
+	<link href="../css/styles.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i"
+		rel="stylesheet">
+</head>
+
+<body>
+	<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+					data-target="#sidebar-collapse"><span class="sr-only">Vi Phạm Hành Chính</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span></button>
+				<a class="navbar-brand" href="#"><span>Vi Phạm Hành Chính (Sở GTVT) </span> </a>
+				<ul class="nav navbar-top-links navbar-right">
+	</nav>
+    <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+        <div class="profile-sidebar">
+            <div class="profile-userpic">
+                <img src="https://vcdn-giaitri.vnecdn.net/2019/05/07/lee-min-ho-5568-1557197339.jpg"
+                    class="img-responsive" alt="">
+            </div>
+			<div class="profile-usertitle">
+				<div class="profile-usertitle-name">AD Hiếu PC</div>
+				<div class="profile-usertitle-status"><span class="indicator label-success"></span>Online</div>
+			</div>
+			<div class="clear"></div>
+			
+		</div>
+		<div class="divider"></div>
+		<form role="search">
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="Search">
+			</div>
+		</form>
+		<!-- Start Menu -->
+		<ul class="nav menu">
+
+			<li><a href= "danhsachhoso.html"><em class="fa fa-address-book">&nbsp;</em> Danh Sách Hồ Sơ</a></li>
+			<li><a href= "Canbo.html"><em class="fa fa-user">&nbsp;</em> Cán Bộ </a></li>
+			<li><a href= "danhmucloi.html"><em class="fa fa-calendar">&nbsp;</em>Danh Mục Lỗi </a></li>
+			<li class="active"><a href= "themcanbo.html"><em class="fa fa-user-plus"></em> Thêm Cán Bộ </a>
+			</li>
+			<li><a href= "index.php"><em class="fa fa-user-secret">&nbsp;</em> Thông Tin Cá Nhân </a>
+			</li>
+			<li><a href= "../login.php"><em class="fa fa-power-off">&nbsp;</em> Logout </a></li>
+		</ul>
+	</div>
+	<!--/.sidebar-->
+
+	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+
+		<div class="panel-body">
+			<form class="form-horizontal" action="" method="post">
+				<fieldset>
+					<!-- Mã Người Vi Phạm-->
+					<div class="form-group">
+						<label class="col-md-3 control-label" for="manguoivipham">Mã Cán Bộ</label>
+						<div class="col-md-9">
+							<input id="name" name="name" type="text" placeholder="Nhập Mã Cán Bộ" class="form-control">
+						</div>
+					</div>
+
+					<!-- Tên Người Vi Phạm-->
+					<div class="form-group">
+						<label class="col-md-3 control-label" for="Tennguoivipham">Tên Cán Bộ</label>
+						<div class="col-md-9">
+							<input id="email" name="email" type="text" placeholder="Nhập Tên Cán Bộ "
+								class="form-control">
+						</div>
+					</div>
+
+					<!-- Ngày Sinh -->
+					<div class="form-group">
+						<label class="col-md-3 control-label" for="Ngaysinh">Loại Cán Bộ</label>
+						<div class="col-md-9">
+							<input id="name" name="name" type="text" placeholder="Loại Cán Bộ" class="form-control">
+						</div>
+					</div>
+
+					<!-- Giới Tính -->
+					<div class="form-group">
+						<label class="col-md-3 control-label" for="Gioitinh">Giới Tính</label>
+						<div class="col-md-9">
+							<input id="name" name="name" type="text" placeholder="Nhập Giới Tính" class="form-control">
+						</div>
+					</div>
+
+					<!-- Địa Chỉ -->
+					<div class="form-group">
+						<label class="col-md-3 control-label" for="Diachi">Chứng Minh Thư</label>
+						<div class="col-md-9">
+							<input id="name" name="name" type="text" placeholder="Nhập Chứng Minh Thư"
+								class="form-control">
+						</div>
+					</div>
+					<!-- Số Điện Thoại -->
+					<div class="form-group">
+						<label class="col-md-3 control-label" for="Sodienthoai">Chức Vụ</label>
+						<div class="col-md-9">
+							<input id="name" name="name" type="text" placeholder=" Nhập Chức Vụ" class="form-control">
+						</div>
+					</div>
+					<!-- Email -->
+					<div class="form-group">
+						<label class="col-md-3 control-label">Địa Chỉ</label>
+						<div class="col-md-9">
+							<input id="name" name="name" type="text" placeholder="Nhập Địa Chỉ " class="form-control">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-3 control-label">Số Điện Thoại</label>
+						<div class="col-md-9">
+							<input id="name" name="name" type="text" placeholder="Nhập Số Điện Thoại "
+								class="form-control">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-3 control-label">Đơn Vị</label>
+						<div class="col-md-9">
+							<input id="name" name="name" type="text" placeholder="Nhập Đơn Vị " class="form-control">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-3 control-label" for="email">Email</label>
+						<div class="col-md-9">
+							<input id="name" name="name" type="text" placeholder="Nhập Email " class="form-control">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-3 control-label">Account</label>
+						<div class="col-md-9">
+							<input id="name" name="name" type="text" placeholder="Nhập Account " class="form-control">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-3 control-label" for="password">Password</label>
+						<div class="col-md-9">
+							<input id="name" name="name" type="text" placeholder="Nhập Password " class="form-control">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-3 control-label">Mô tả</label>
+						<div class="col-md-9">
+							<input id="name" name="name" type="text" placeholder="Nhập Mô tả " class="form-control">
+						</div>
+					</div>
+					<!-- Form actions -->
+					<div class="form-group">
+						<div class="col-md-12 widget-right">
+							<button type="submit" class="btn btn-default btn-md pull-right">Submit</button>
+						</div>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+	</div>
+	<!--/.col-->
+
+</body>
+
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vi Phạm Hành Chính</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/datepicker3.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/linearicons.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/simple-line-icons.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/ionicons.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/jquery.mCustomScrollbar.css"> -->
+</head>
+
+<body>
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#sidebar-collapse"><span class="sr-only">Vi Phạm Hành Chính</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span></button>
+                <a class="navbar-brand" href="#"><span>Vi Phạm Hành Chính (Sở GTVT) </span> </a>
+                <ul class="nav navbar-top-links navbar-right">
+    </nav>
+    <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+        <div class="profile-sidebar">
+            <div class="profile-userpic">
+                <img src="https://vcdn-giaitri.vnecdn.net/2019/05/07/lee-min-ho-5568-1557197339.jpg"
+                    class="img-responsive" alt="">
+            </div>
+            <div class="profile-usertitle">
+                <div class="profile-usertitle-name">Admin</div>
+                <div class="profile-usertitle-status"><span class="indicator label-success"></span>Online</div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="divider"></div>
+        <form role="search">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
+            </div>
+        </form>
+        <!-- Start Menu -->
+        <ul class="nav menu">
+
+            <li><a href= "danhsachhoso.html"><em class="fa fa-address-book">&nbsp;</em> Danh Sách Hồ Sơ</a></li>
+            <li class="active"><a href= "Canbo.html"><em class="fa fa-user">&nbsp;</em> Cán Bộ </a></li>
+            <li><a href= "danhmucloi.html"><em class="fa fa-calendar">&nbsp;</em>Danh Mục Lỗi </a></li>
+            <li><a href= "themcanbo.html"><em class="fa fa-user-plus"></em> Thêm Cán Bộ </a></li>
+            <li><a href= "index.php"><em class="fa fa-user-secret">&nbsp;</em> Thông Tin Cá Nhân </a>
+            </li>
+			<li><a href= "../login.php"><em class="fa fa-power-off">&nbsp;</em> Logout </a></li>
+		</ul>
+	</div>
+	<!--/.sidebar-->
+
+	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+		<div class="panel-body">
+			<div class="row">
+
+				<div class="col-lg-3 col-xl-4">
+					<div class="card" style="width:300px">
+
+						<img class="card-img-top"
+							src="https://vcdn-giaitri.vnecdn.net/2019/05/07/lee-min-ho-5568-1557197339.jpg"
+							alt="Card image" style="width:100%">
+						<div class="card-body">
+							<h4 class="card-title">1751220089</h4>
+							<h4 class="card-title">Hiếu PC</h4>
+							<p class="card-text">Admin</p>
+							<a href="#" class="btn btn-primary stretched-link" data-toggle="modal"
+								data-target="#myModal">Xem Thông Tin</a>
+							<a href="#" class="btn btn-primary stretched-link">Sửa</a>
+							<a href="#" class="btn btn-primary stretched-link">Xóa</a>
+							<div class="modal fade" id="myModal">
+								<div class="modal-dialog modal-lg">
+									<div class="modal-content">
+
+										<!-- Modal Header -->
+										<div class="modal-header">
+											<h4 class="modal-title">Hiếu PC</h4>
+										</div>
+
+										<!-- Modal body -->
+										<div class="modal-body">
+											<div class="view-info">
+												<div class="row">
+													<div class="col-lg-12">
+														<div class="general-info">
+															<div class="row">
+																<div class="col-lg-6 col-xl-6">
+																	<table class="table m-0 table-responsive">
+																		<tbody>
+																			<tr>
+																				<th scope="row">Mã Cán Bộ</th>
+																				<td><a href="#!">TUAC5</a></td>
+																			</tr>
+																			<tr>
+																				<th scope="row">Tên Cán Bộ</th>
+																				<td>Hiếu PC</td>
+																			</tr>
+																			<tr>
+																				<th scope="row">Loại Cán Bộ</th>
+																				<td>Admin</td>
+																			</tr>
+																			<tr>
+																				<th scope="row">Giới Tính</th>
+																				<td>Bê Đê</td>
+																			</tr>
+																			<tr>
+																				<th scope="row">Chứng Minh Thư</th>
+																				<td><a href="#!">187566872</a></td>
+																			</tr>
+																			<tr>
+																				<th scope="row">Chức vụ</th>
+																				<td><a href="#!">Nhân Viên IT</a></td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</div>
+																<!-- end of table col-lg-6 -->
+																<div class="col-lg-6 col-xl-6">
+																	<table class="table table-responsive">
+																		<tbody>
+
+																			<tr>
+																				<th scope="row">Địa chỉ</th>
+																				<td>193 Nguyễn Lương Bằng, Liên Chiểu,
+																					Đà Nẵng</td>
+																			</tr>
+																			<tr>
+																				<th scope="row">Số Điện Thoại</th>
+																				<td>0123456789</td>
+																			</tr>
+																			<tr>
+																				<th scope="row">Dơn Vị</th>
+																				<td>Phòng Cán Bộ </td>
+																			</tr>
+																			<tr>
+																				<th scope="row">Email</th>
+																				<td><a
+																						href="#!">hieupc6898@gmail.com</a>
+																				</td>
+																			</tr>
+																			<tr>
+																				<th scope="row">Account</th>
+																				<td><a href="#!">hieupc</a></td>
+																			</tr>
+																			<tr>
+																				<th scope="row">Password</th>
+																				<td><a href="#!">hieupc6898</a></td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</div>
+																<!-- end of table col-lg-6 -->
+															</div>
+															<!-- end of row -->
+														</div>
+														<!-- end of general info -->
+													</div>
+													<!-- end of col-lg-12 -->
+												</div>
+												<!-- end of row -->
+												<div class="text-center">
+													<button type="button" class="btn btn-danger"
+														data-dismiss="modal">Close</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+					</div>
+
+				</div>
+				<div class="col-lg-3 col-xl-4">
+					<div class="card" style="width:300px">
+
+						<img class="card-img-top"
+							src="https://vcdn-giaitri.vnecdn.net/2019/05/07/lee-min-ho-5568-1557197339.jpg"
+							alt="Card image" style="width:100%">
+						<div class="card-body">
+							<h4 class="card-title">1751220021</h4>
+							<h4 class="card-title">Vương IOS</h4>
+							<p class="card-text">Cán Bộ Phòng Xử Lý Hồ Sơ</p>
+							<a href="#" class="btn btn-primary stretched-link">Xem Thông Tin</a>
+							<a href="#" class="btn btn-primary stretched-link">Sửa</a>
+							<a href="#" class="btn btn-primary stretched-link">Xóa</a>
+						</div>
+
+
+					</div>
+
+				</div>
+				<div class="col-lg-3 col-xl-4">
+					<div class="card" style="width:300px">
+
+						<img class="card-img-top"
+							src="https://vcdn-giaitri.vnecdn.net/2019/05/07/lee-min-ho-5568-1557197339.jpg"
+							alt="Card image" style="width:100%">
+						<div class="card-body">
+							<h4 class="card-title">1751220056</h4>
+							<h4 class="card-title">Tứ Androis</h4>
+							<p class="card-text">Cán Bộ Quản Lý Kho</p>
+							<a href="#" class="btn btn-primary stretched-link">Xem Thông Tin</a>
+							<a href="#" class="btn btn-primary stretched-link">Sửa</a>
+							<a href="#" class="btn btn-primary stretched-link">Xóa</a>
+						</div>
+
+
+					</div>
+
+				</div>
+
+			</div>
+
+
+		</div>
+	</div>
+	<!--/.col-->
+
+
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/chart.min.js"></script>
+	<script src="js/chart-data.js"></script>
+	<script src="js/easypiechart.js"></script>
+	<script src="js/easypiechart-data.js"></script>
+	<script src="js/bootstrap-datepicker.js"></script>
+	<script src="js/custom.js"></script>
+
+</body>
+
+</html>

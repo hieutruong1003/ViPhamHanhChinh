@@ -1,0 +1,29 @@
+class canbo {
+        private $ma_canbo;
+        private $ten_canbo;
+        private $loai_canbo;
+        private $gioitinh;
+        private $cmnd;
+        private $chuc_vu;
+        private $dia_chi;
+        private $ngay_sinh;
+        private $sdt;
+        private $don_vi;
+        private $email;
+        private $account;
+        private $password;
+        private $hinhanh;
+        private $mota;
+        
+        public function __construct($ma_canbo,$ten_canbo, $loai_canbo, $gioitinh, $cmnd, $chuc_vu, $dia_chi, $ngay_sinh, $sdt, $don_vi, $email, 
+        $account, $password, $hinhanh, $mota)
+        {
+            $this->ma_canbo = $ma_canbo;
+            $this->ten_canbo = $ten_canbo;
+            $this->loai_canbo = $loai_canbo;
+            $this->gioitinh = $gioitinh;
+            $this->cmnd = $cmnd;
+            $this->chuc_vu = $chuc_vu;
+            $this->dia_chi
+        }
+    }
