@@ -8,7 +8,6 @@
         $ngay_tamgiu = date('Y-m-d',strtotime($_POST['ngay_tamgiu']));
         $thoigian_tamgiu = $_POST['thoigian_tamgiu'];
         $mota = $_POST['mota'];
-
         $sql_check = "select * from thongtin_tangvat where ma_tangvat ='$ma_tangvat'";
         $result = mysqli_query($conn,$sql_check);
         if(mysqli_num_rows($result) == 1){

@@ -56,7 +56,7 @@
 		<!-- Start Menu  -->
 		<ul class="nav menu">
 			<li><a href="index.php"><em class="fa far fa-user">&nbsp;</em> Thông Tin Cá Nhân </a></li>
-			<li class="active"><a href="taohosovipham.php"><em class="glyphicon glyphicon-list-alt">&nbsp;</em> Tạo Hồ Sơ Vi Phạm</a></li>
+			<li class="active"><a href="taohosovipham.php"><em class="fa fa-list-alt">&nbsp;</em> Tạo Hồ Sơ Vi Phạm</a></li>
 			<li><a href="hosovipham.html"><em class="fa fa-address-book">&nbsp;</em> Hồ Sơ Vi Phạm</a></li>
 			<li><a href="nguoivipham.html"><em class="fa fa-user-circle">&nbsp;</em> Người Vi Phạm</a></li>
 			<li><a href="thongtintangvat.html"><em class="fa fa-bicycle">&nbsp;</em> Thông tin Tang Vật</a></li>
@@ -239,8 +239,7 @@
 						<th style=" text-align: center;">Mô Tả</th>
 					</tr>
 				</thead>
-				<tbody id="res">
-
+				<tbody id="res_tv">
 					<tr>
 						<td>
 							<div class="group ">
@@ -408,8 +407,8 @@
 						</td>
 						<td>
 							<div class="group">
-								<input type="text" name="mahoso_loivipham" id="mahoso_loivipham" hidden>
-								<input id="phat_hanhchinh" name="phat_hanhchinh" type="number" class="form-control">
+								<input type="text" name="mahoso_loivipham"  id="mahoso_loivipham" hidden>
+								<input id="phat_hanhchinh" step="1" name="phat_hanhchinh" type="number" class="form-control">
 							</div>
 						</td>
 						<td>
@@ -524,12 +523,12 @@
 		$('#btn_tangvat').click(function() {
 			var temp = $('#ma_hoso').val();
 			$('#ma_hoso_tangvat').val(temp);
-			console.log($('#ma_hoso_tangvat').val());
 			$.ajax({
 				method: "POST",
 				url: "../controller/insert_tangvat.php",
 				data: $('#form_tangvat').serialize(),
 				success: function(reponse) {
+					console.log(reponse);
 					if (reponse == "insert error") {
 						alert("Thông tin gửi đi thiếu hoặc chưa đúng định dạng!");
 						
@@ -539,6 +538,7 @@
 						$('#ten_tangvat').val("");
 						$('#thoigian_tamgiu').val("");
 						$('#mota').val("");
+						
 						$.ajax({
 							type: "POST",
 							url: "../controller/loadTangVat.php",
@@ -547,17 +547,15 @@
 							},
 							dataType: "text",
 							success: function(text) {
-								if ($('#res')) {
-									$('#res').removeClass(".res_tr");
-									console.log("...");
+								var str = document.querySelectorAll('.res_tangvat');
+								for (i = 0; i < str.length; i++) {
+									str[i].remove();
 								}
-								$('#res').prepend(text);
-								//console.log(text);
+								$('#res_tv').prepend(text);
 							}
 						});
 					} else if (reponse == "already exist") {
 						alert("Mã Tang Vật đã tồn tại, Kiểm tra và nhập lại Mã Tang Vật!");
-
 					}
 				}
 			});
@@ -571,7 +569,6 @@
 				url:"../controller/insert_chiTietLoi.php",
 				data:$('#form_chitietloi').serialize(),
 				success: function(reponse){
-					
 					if(reponse == "insert error"){
 						alert("Thông tin gửi đi thiếu hoặc chưa đúng định dạng!");
 					}else if(reponse == "insert success"){
@@ -584,6 +581,10 @@
 							data:{ma_hoso:"" + $('#ma_hoso').val()},
 							dataType:"text",
 							success: function(text){
+								var str = document.querySelectorAll('.rs_loi');
+								for (i = 0; i < str.length; i++) {
+									str[i].remove();
+								}
 								$('#res_loi').prepend(text);
 							}
 						});

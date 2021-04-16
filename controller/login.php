@@ -38,7 +38,7 @@
                 echo "
                 <script>
                 alert('Thông tin đăng nhập không chính xác!');
-                window.location.href = '../login.html';
+                window.location.href = '../login.php';
                 </script>
                 ";
                 $conn->close();
@@ -49,7 +49,7 @@
         echo "
         <script>
         alert('Thông tin đăng nhập không chính xác!');
-        window.location.href = '../login.html';
+        window.location.href = '../login.php';
         </script>
         ";
         exit();
