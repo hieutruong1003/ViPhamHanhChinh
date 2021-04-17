@@ -29,7 +29,7 @@
                 if(mysqli_query($conn,$sql_insert)){
                     echo "insert success";
                 }else{
-                    echo "insert error" . " | " . mysqli_error($conn);
+                    echo "insert error" . mysqli_error($conn);
                 }
         }else{
                 echo "insert error";

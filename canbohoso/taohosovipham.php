@@ -135,6 +135,7 @@
 				<div class="form-group">
 					<label class="col-md-3 control-label" for="ma_hoso">Mã Hồ Sơ</label>
 					<div class="col-md-6">
+						<input id="cmnd_nguoivipham" name="cmnd_nguoivipham" type="number" hidden>
 						<input id="ma_hoso" name="ma_hoso" type="text" placeholder="Nhập Mã Hồ Sơ" class="form-control">
 					</div>
 				</div>
@@ -171,13 +172,7 @@
 						<input id="ma_canbo_lapbienban" name="ma_canbo_lapbienban" type="text" placeholder=" Nhập Mã Cán Bộ Lập Biên Bản" class="form-control">
 					</div>
 				</div>
-				<!-- Email -->
-				<div class="form-group">
-					<label class="col-md-3 control-label" for="cmnd_nguoivipham">CMND Người Vi Phạm</label>
-					<div class="col-md-6">
-						<input id="cmnd_nguoivipham" name="cmnd_nguoivipham" type="number" placeholder="Nhập Mã Người Vi Phạm " class="form-control">
-					</div>
-				</div>
+			
 				<div class="form-group">
 					<label class="col-md-3 control-label" fo="ngay_nhaphoso">Ngày Nhập HS</label>
 					<div class="col-md-6">
@@ -442,6 +437,7 @@
 	<script src="../js/bootstrap.min.js"></script>
 	<script src="../js/custom.js"></script>
 	<script>
+		
 		$('#ma_loi').change(function() {
 			var e = document.getElementById("ma_loi");
 			var p_id = e.options[e.selectedIndex].value;
@@ -471,6 +467,7 @@
 				url: "../controller/insert_nvp.php",
 				data: $("#form_nvp").serialize(),
 				success: function(reponse) {
+					console.log(reponse);
 					if (reponse == "insert error") {
 						alert("Thông tin gửi đi thiếu hoặc chưa đúng định dạng!");
 					} else if (reponse == "insert success") {
@@ -483,7 +480,7 @@
 						$('#sdt').attr("readonly", true);
 						$('#email').attr("readonly", true);
 						$("#btn_nvp").attr("disabled", true);
-					} else if (reponse = "already exist") {
+					} else if (reponse == "already exist") {
 						alert("Thông tin người vi phạm đã tồn tại! Kiểm tra lại CMND, nếu đúng thì bỏ qua thông tin này!");
 					}
 				}
@@ -491,11 +488,14 @@
 			event.preventDefault();
 		});
 		$('#btn_hoso').click(function() {
+			var txt = $('#cmnd').val();
+			$('#cmnd_nguoivipham').val(txt);
 			$.ajax({
 				method: "POST",
 				url: "../controller/insert_hoso.php",
 				data: $('#form_hoso').serialize(),
 				success: function(reponse) {
+					console.log(reponse);
 					if (reponse == "insert error") {
 						alert("Thông tin gửi đi thiếu hoặc chưa đúng định dạng!");
 					} else if (reponse == "insert success") {
@@ -514,6 +514,8 @@
 						$("#btn_hoso").attr("disabled", true);
 					} else if (reponse == "already exist") {
 						alert("Mã Hồ Sơ đã tồn tại, kiểm tra lại thông tin!");
+					}else{
+						alert("Thông tin gửi đi thiếu hoặc chưa đúng định dạng!");
 					}
 				}
 			});

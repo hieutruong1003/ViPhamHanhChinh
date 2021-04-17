@@ -422,7 +422,10 @@
 	</div>
 <?php
 			} else {
-				echo "Chưa nhập CMND";
+				echo "<div>
+					<h5 class = 'text-center'> Thông tin tra cứu trống!</h5>
+				</div>
+				";
 			}
 ?>
 </div>
