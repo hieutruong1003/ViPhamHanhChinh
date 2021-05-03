@@ -135,7 +135,7 @@
 				<div class="form-group">
 					<label class="col-md-3 control-label" for="ma_hoso">Mã Hồ Sơ</label>
 					<div class="col-md-6">
-						<input id="cmnd_nguoivipham" name="cmnd_nguoivipham" type="number" hidden>
+							<input id="cmnd_nguoivipham" name="cmnd_nguoivipham" type="number" hidden>
 						<input id="ma_hoso" name="ma_hoso" type="text" placeholder="Nhập Mã Hồ Sơ" class="form-control">
 					</div>
 				</div>

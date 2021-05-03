@@ -13,7 +13,6 @@
         while($_row = mysqli_fetch_assoc($result)){
             if($_row ["loai_canbo"] == $loaiCB && $_row['loai_canbo'] == 'admin'){
                 echo "<script>
-                alert('Thông tin đăng nhập chính xác!');
                 window.location.href= '../admin/index.php?ma_canbo=".$username."';
                 </script>
                 ";
@@ -21,14 +20,12 @@
             }
             else if($_row ["loai_canbo"] == $loaiCB && $_row['loai_canbo'] == 'cbhoso'){
                 echo "<script>
-                alert('Thông tin đăng nhập chính xác!');
                 window.location.href= '../canbohoso/index.php?ma_canbo=".$username."';
                 </script>
                 ";
             }
             else if($_row ["loai_canbo"] == $loaiCB && $_row['loai_canbo'] == 'cbkho'){
                 echo "<script>
-                alert('Thông tin đăng nhập chính xác!');
                 window.location.href= '../canbokho/index.php?ma_canbo=".$username."';
                 </script>
                 ";
